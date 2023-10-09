@@ -1,0 +1,16 @@
+[
+    {
+        "name": "Vegetarian Pasta",
+        "diet": "Vegetarian",
+        "ingredients": ["Pasta", "Tomato", "Garlic", "Basil"],
+        "skill": "Beginner",
+        "image": "https://via.placeholder.com/150"
+    },
+    {
+        "name": "Chicken Stir Fry",
+        "diet": "Low-carb",
+        "ingredients": ["Chicken", "Bell Pepper", "Soy Sauce", "Garlic"],
+        "skill": "Intermediate",
+        "image": "https://via.placeholder.com/150"
+    }
+]

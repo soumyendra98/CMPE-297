@@ -1,0 +1,12 @@
+use css in the entire application to style the pages and make it look colorful using correct color palatte 
+use bootstrap to make the pages responsive and mobile friendly
+use javascript to make the pages interactive and user friendly
+use Last.fm  free API that allows you to access various music-related data, including song recommendations, artist information, and user listening history.
+You can use the Last.fm API to retrieve recommended tracks for a user based on their listening history and preferences.
+
+css to style recommended songs page and make it look colorful using correct color palatte 
+bootstrap to make the pages responsive and mobile friendly and show only 8 songs at a time then make a scroll bar in a side
+
+write unittest for all the functions in the application
+
+

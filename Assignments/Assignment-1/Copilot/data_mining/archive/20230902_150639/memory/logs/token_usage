@@ -1,0 +1,6 @@
+step_name,prompt_tokens_in_step,completion_tokens_in_step,total_tokens_in_step,total_prompt_tokens,total_completion_tokens,total_tokens
+clarify,202,100,302,202,100,302
+clarify,405,71,476,607,171,778
+clarify,460,5,465,1067,176,1243
+gen_clarified_code,2394,1363,3757,3461,1539,5000
+gen_entrypoint,1535,57,1592,4996,1596,6592

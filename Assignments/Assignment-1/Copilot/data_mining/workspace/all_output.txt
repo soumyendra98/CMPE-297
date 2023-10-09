@@ -1,0 +1,161 @@
+Sure, let's modify the HTML, CSS, and JavaScript files to include more genres, use the Last.fm API, add more features, and make the pages responsive and mobile-friendly.
+
+`index.html`
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Song Suggester</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center mt-5">Song Suggester</h1>
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <select id="genre-select" class="form-control mt-5">
+                    <option value="">Select a genre</option>
+                    <option value="rock">Rock</option>
+                    <option value="pop">Pop</option>
+                    <option value="jazz">Jazz</option>
+                    <option value="hiphop">Hip Hop</option>
+                    <option value="country">Country</option>
+                    <option value="classical">Classical</option>
+                    <!-- Add more genres as needed -->
+                </select>
+                <button id="get-songs-button" class="btn btn-primary btn-block mt-3">Get Songs</button>
+                <div id="song-list" class="mt-5"></div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+```
+
+`styles.css`
+```css
+body {
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 600px;
+}
+
+#genre-select {
+    height: 50px;
+}
+
+#get-songs-button {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+#get-songs-button:hover {
+    background-color: #0056b3;
+    border-color: #004085;
+}
+
+#song-list {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+#song-list div {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+```
+
+`script.js`
+```javascript
+document.getElementById('get-songs-button').addEventListener('click', function() {
+    var genre = document.getElementById('genre-select').value;
+    if (genre) {
+        getSongs(genre);
+    } else {
+        alert('Please select a genre');
+    }
+});
+
+function getSongs(genre) {
+    // Replace with the URL of the Last.fm API
+    var apiUrl = 'http://ws.audioscrobbler.com/2.0/?method=tag.gettoptracks&tag=' + genre + '&api_key=YOUR_API_KEY&format=json';
+
+    fetch(apiUrl)
+        .then(function(response) {
+            return response.json();
+        })
+        .then(function(data) {
+            displaySongs(data.tracks.track);
+        })
+        .catch(function(error) {
+            console.error('Error:', error);
+        });
+}
+
+function displaySongs(tracks) {
+    var songList = document.getElementById('song-list');
+    songList.innerHTML = '';
+
+    tracks.forEach(function(track) {
+        var trackDiv = document.createElement('div');
+        trackDiv.textContent = track.name + ' by ' + track.artist.name;
+        songList.appendChild(trackDiv);
+    });
+}
+```
+
+Please note that you need to replace `YOUR_API_KEY` with your actual Last.fm API key. The `getSongs` function fetches top tracks from the Last.fm API based on the selected genre and the `displaySongs` function displays the tracks in the song list. The CSS file styles the application with a modern and colorful palette. The song list items are styled with a white background, some padding, and a box shadow for a card-like appearance. The song list is also limited to a maximum height of 400px and a scrollbar is added if the content exceeds this height.
+
+For unit testing in JavaScript, we can use Jest, a popular JavaScript testing framework. Here is an example of how you might test the `getSongs` and `displaySongs` functions:
+
+`script.test.js`
+```javascript
+const { getSongs, displaySongs } = require('./script');
+
+test('getSongs function should fetch data from API', () => {
+    // Mock fetch function
+    global.fetch = jest.fn(() =>
+        Promise.resolve({
+            json: () => Promise.resolve({ tracks: { track: [] } }),
+        })
+    );
+
+    getSongs('rock');
+
+    expect(global.fetch).toHaveBeenCalledTimes(1);
+    expect(global.fetch).toHaveBeenCalledWith(
+        'http://ws.audioscrobbler.com/2.0/?method=tag.gettoptracks&tag=rock&api_key=YOUR_API_KEY&format=json'
+    );
+});
+
+test('displaySongs function should create div for each track', () => {
+    // Mock document.getElementById function
+    document.getElementById = jest.fn(() => {
+        return {
+            innerHTML: '',
+            appendChild: jest.fn(),
+        };
+    });
+
+    var tracks = [
+        { name: 'Song 1', artist: { name: 'Artist 1' } },
+        { name: 'Song 2', artist: { name: 'Artist 2' } },
+    ];
+
+    displaySongs(tracks);
+
+    expect(document.getElementById).toHaveBeenCalledTimes(1);
+    expect(document.getElementById).toHaveBeenCalledWith('song-list');
+});
+```
+
+Please note that you need to install Jest and add it to your project's devDependencies. You can do this by running `npm install --save-dev jest` in your project's root directory. Then, you can run your tests by running `npm test` in your project's root directory.

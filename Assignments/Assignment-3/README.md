@@ -71,4 +71,4 @@ prompt fragments - parts of instructons of prompt that can be reused in. many us
 
  
 
-prompt template - full system prompt, role play, input engineering, instruction engineering, output engineering
+prompt template - full system prompt, role play, input engineering, instruction engineering, output engineering6

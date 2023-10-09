@@ -1,0 +1,15 @@
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+}
+
+#game-board div {
+    border: 1px solid black;
+    text-align: center;
+    padding: 10px;
+}
+
+#restart-button {
+    margin-top: 20px;
+}

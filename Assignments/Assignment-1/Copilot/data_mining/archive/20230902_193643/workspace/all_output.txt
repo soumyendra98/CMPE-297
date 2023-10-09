@@ -1,0 +1,150 @@
+Sure, let's create a 10x10 grid for the game board using Bootstrap and CSS. We will also add some colors to distinguish the snake, ladder, and player positions.
+
+styles.css
+```css
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    gap: 2px;
+    width: 500px;
+    height: 500px;
+    margin: 0 auto;
+}
+
+#game-board div {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+}
+
+button {
+    display: block;
+    margin: 20px auto;
+}
+
+.snake {
+    background-color: red;
+}
+
+.ladder {
+    background-color: green;
+}
+
+.player1 {
+    background-color: blue;
+}
+
+.player2 {
+    background-color: yellow;
+}
+```
+
+index.html
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake and Ladder Game</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h1>Snake and Ladder Game</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div id="game-board" class="d-flex flex-wrap"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 text-center">
+                <button id="roll-dice" class="btn btn-primary">Roll Dice</button>
+                <button id="restart-game" class="btn btn-secondary">Restart Game</button>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
+```
+
+In the above HTML, we have used Bootstrap classes to create a responsive layout for the game. The game board is created using a flex container with wrapping enabled.
+
+main.js
+```javascript
+// Function to create the game board
+function createGameBoard() {
+    const gameBoard = document.getElementById('game-board');
+
+    // Create 100 divs for the game board
+    for (let i = 1; i <= 100; i++) {
+        const div = document.createElement('div');
+        div.id = `cell-${i}`;
+        div.className = 'p-2 border';
+        gameBoard.appendChild(div);
+    }
+
+    // Add classes for snakes and ladders
+    for (let key in snakesAndLadders) {
+        const cell = document.getElementById(`cell-${key}`);
+        if (snakesAndLadders[key] < key) {
+            cell.classList.add('snake');
+        } else {
+            cell.classList.add('ladder');
+        }
+    }
+}
+
+// Function to move the player
+function movePlayer(player, position) {
+    let newPosition = position + rollDice();
+
+    // Check for snakes or ladders
+    if (snakesAndLadders[newPosition]) {
+        newPosition = snakesAndLadders[newPosition];
+    }
+
+    // Update player position
+    if (player === 1) {
+        if (player1Position) {
+            document.getElementById(`cell-${player1Position}`).classList.remove('player1');
+        }
+        player1Position = newPosition;
+        document.getElementById(`cell-${player1Position}`).classList.add('player1');
+    } else {
+        if (player2Position) {
+            document.getElementById(`cell-${player2Position}`).classList.remove('player2');
+        }
+        player2Position = newPosition;
+        document.getElementById(`cell-${player2Position}`).classList.add('player2');
+    }
+
+    // Switch player
+    currentPlayer = currentPlayer === 1 ? 2 : 1;
+}
+
+// Function to restart the game
+function restartGame() {
+    if (player1Position) {
+        document.getElementById(`cell-${player1Position}`).classList.remove('player1');
+    }
+    if (player2Position) {
+        document.getElementById(`cell-${player2Position}`).classList.remove('player2');
+    }
+    player1Position = 0;
+    player2Position = 0;
+    currentPlayer = 1;
+}
+
+// Create the game board when the page loads
+window.onload = createGameBoard;
+```
+
+In the above JavaScript, we have added a function to create the game board and add classes for snakes and ladders. We have also updated the `movePlayer` and `restartGame` functions to add and remove the player classes from the game board.

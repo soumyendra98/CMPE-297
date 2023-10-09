@@ -1,0 +1,55 @@
+body {
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 600px;
+}
+
+#genre-select {
+    height: 50px;
+}
+
+#get-songs-button {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+#get-songs-button:hover {
+    background-color: #0056b3;
+    border-color: #004085;
+}
+
+#song-list {
+    max-height: 400px;
+    overflow-y: auto;
+    margin-top: 20px;
+
+}
+
+#song-list div {
+    background-color: #e0dbdb;
+    padding: 20px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+//add css to heading 1 of container class   
+.container h1 {
+    font-size: 50px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+#song-list div h5 {
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+#song-list div p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
