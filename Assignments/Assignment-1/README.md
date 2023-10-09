@@ -50,4 +50,8 @@ Best submission will be judged by students in a poll organized by TA.
 
 SOLUTION
 
-Medium Article Link - 
+Medium Article Link - https://medium.com/@shrivastavasoumyendra/decoding-the-crystal-blanket-a-data-driven-dive-into-sea-ice-extent-14d0dd1a4a79
+
+ChatGPT Conversation - https://chat.openai.com/share/d8713426-3984-479c-939b-aad7d64b4d30
+
+Copilot - 
