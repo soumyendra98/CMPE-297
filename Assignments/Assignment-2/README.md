@@ -78,3 +78,4 @@ Medium Article - https://medium.com/@soumyendra.shrivastava/unleashing-the-power
 
 Presentation - https://docs.google.com/presentation/d/1MnXkZv3YFqXMPvXzkk5zt5IVG3jqLOiXiNv6WYCR_j0/edit?usp=sharing
 
+Video - https://drive.google.com/file/d/1-2wq8XSbD9Wu6QHOga73zdewiE2WxtbQ/view?usp=sharing
