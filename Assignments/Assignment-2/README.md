@@ -59,3 +59,22 @@ use smaller amount of data
  
 
 use chatgpt gpt4 help 
+
+
+
+SOLUTION
+
+Google Colabs - 
+
+JAX - https://colab.research.google.com/drive/17af14KA1vwBQqPiSwHS1ypq7lwSp3nJG?usp=sharing
+
+TensorFlow - https://colab.research.google.com/drive/1pvE66GXmjSRGlwuqgHRbb95NXVY_NdGi?usp=sharing
+
+PyTorch - https://colab.research.google.com/drive/14dp68XQCjkSRIKo_fA4RDVAv6p-7qa1s?usp=sharing
+
+Textbooks is All You Need - https://colab.research.google.com/drive/1gyR9dzzOvX3qmXASU8j38j5rO5XgIWfs?usp=sharing
+
+Medium Article - 
+
+Presentation - https://docs.google.com/presentation/d/1MnXkZv3YFqXMPvXzkk5zt5IVG3jqLOiXiNv6WYCR_j0/edit?usp=sharing
+
