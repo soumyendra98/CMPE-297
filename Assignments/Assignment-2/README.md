@@ -74,7 +74,8 @@ PyTorch - https://colab.research.google.com/drive/14dp68XQCjkSRIKo_fA4RDVAv6p-7q
 
 Textbooks is All You Need - https://colab.research.google.com/drive/1gyR9dzzOvX3qmXASU8j38j5rO5XgIWfs?usp=sharing
 
-Medium Article - 
+Medium Article - https://medium.com/@soumyendra.shrivastava/unleashing-the-power-of-nanogpt-a-dive-into-jax-tensorflow-and-pytorch-implementations-b31f5368dc3b
 
 Presentation - https://docs.google.com/presentation/d/1MnXkZv3YFqXMPvXzkk5zt5IVG3jqLOiXiNv6WYCR_j0/edit?usp=sharing
 
+Video - https://drive.google.com/file/d/1-2wq8XSbD9Wu6QHOga73zdewiE2WxtbQ/view?usp=sharing
