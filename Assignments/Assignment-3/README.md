@@ -71,4 +71,16 @@ prompt fragments - parts of instructons of prompt that can be reused in. many us
 
  
 
-prompt template - full system prompt, role play, input engineering, instruction engineering, output engineering6
+prompt template - full system prompt, role play, input engineering, instruction engineering, output engineering
+
+
+SOLUTION 
+
+Google Colab 
+
+Prompt Optimizer - https://colab.research.google.com/drive/1xDxZEoE-CSDajKIPtYFOyO0VBtPmVD1X?usp=sharing
+
+Prompt Critique - https://colab.research.google.com/drive/1alaYm7Aq_hmBtG0NfyU0RtgnSqCNz-lc?usp=sharing
+
+Medium Articles 
+
