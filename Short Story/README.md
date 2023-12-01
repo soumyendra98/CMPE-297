@@ -38,4 +38,4 @@ Medium Article - https://medium.com/@soumyendra.shrivastava/deciphering-the-code
 
 SlideShare - https://docs.google.com/presentation/d/1A2Psq-h2veSfuWAbRxx1br59rCdqs_tm2j50EDYzuSM/edit?usp=sharing
 
-Video Link - 
+Video Link - https://drive.google.com/file/d/1wSSWFlK5qhkCGSVYSspvQTLGyNAusruQ/view?usp=sharing
