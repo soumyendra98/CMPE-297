@@ -59,4 +59,15 @@ g) Quantize llm with ggml and gguf and build an end2end chat application on mobi
 
 h) Use LLM studio and LLM Data Studio to demonstrate data set generation, fine tuning, deployment to huggingface and inference (Gradio)
 
+
 SOLUTION
+
+LLM Quantize - https://colab.research.google.com/drive/1JWKRMk6fJaHotU_VifrWYL_dZmJLDzrG?usp=sharing
+
+Lora LLama2 - https://colab.research.google.com/drive/1eert7UmGGbE3Ug8fjUjRyGpDLRheh0eS?usp=sharing
+
+Mistral Langchaing - https://colab.research.google.com/drive/1ZMo8oPyiUZNVurQD_4bdsiKRQOX3I3hv?usp=sharing
+
+Mistral Rag Chrima DB - https://colab.research.google.com/drive/1YYuyCg6Eu2wfWudrkJgvQrABuwtwxmjI?usp=sharing
+
+Qlora LLama2 = https://colab.research.google.com/drive/1n5I7mUnAEZ6E7GRusIQEGHqddzfR2rwd?usp=sharing

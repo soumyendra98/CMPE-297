@@ -34,8 +34,8 @@ this is an individual assignment
 
 SOLUTION 
 
-Medium Article - 
+Medium Article - https://medium.com/@soumyendra.shrivastava/deciphering-the-code-of-human-communication-the-remarkable-world-of-large-language-models-129909dde534
 
-SlideShare - 
+SlideShare - https://docs.google.com/presentation/d/1A2Psq-h2veSfuWAbRxx1br59rCdqs_tm2j50EDYzuSM/edit?usp=sharing
 
 Video Link - 
