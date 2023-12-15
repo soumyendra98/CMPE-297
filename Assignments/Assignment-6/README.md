@@ -45,3 +45,6 @@ provide detailed video, medium article of how you approached the same and slide 
 
 
 SOLUTION 
+
+1. [Vercel App](https://github.com/soumyendra98/CMPE-297/tree/main/Assignments/Assignment-6/ScribbleDiffusion)
+2. [Chat Copilot](https://github.com/soumyendra98/CMPE-297/tree/main/Assignments/Assignment-6/chat-copilot)
